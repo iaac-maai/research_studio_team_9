@@ -45,16 +45,6 @@ BIM models are geometrically precise but are often populated with unverified, di
 | BIM model | Revit | Wall types, compound-structure layers, materials, thicknesses | Materials often generic |
 | Project requirements | Hardcoded threshold (0.022 W/(m·K)) | Target limit for the thermal check | Not yet configurable; TODO: name the code or project source |
 
-## Heilmeier Catechism
-
-1. **What are you trying to do?** TODO
-2. **How is it done today, and what are the limits of current practice?** TODO
-3. **What is new in your approach and why do you think it will be successful?** TODO
-4. **Who cares? If you succeed, what difference will it make?** TODO
-5. **What are the risks?** TODO
-6. **How much will it cost?** TODO
-7. **How long will it take?** TODO
-8. **What are the mid-term and final "exams" to check for success?** TODO
 
 ## What it does
 
