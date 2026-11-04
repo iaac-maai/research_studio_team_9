@@ -1,6 +1,7 @@
 # SpecSynth AI
 
 **AI-powered Construction Product Intelligence and Design Verification**
+
 From manufacturer product information to evidence-based building design decisions.
 
 SpecSynth AI is being developed as part of the IAAC Master's programme, Research Studio — Smart Construction, exploring the application of AI, BIM and computational methods to improve decision-making in the Architecture, Engineering and Construction industry. The
