@@ -1,6 +1,3 @@
-# research_studio_team_9
-Fawad, Soumya, Kazuko
-
 # SpecSynth AI
 
 **A Revit add-in prototype for mapping BIM insulation materials to
@@ -17,6 +14,47 @@ thermal schedule to Excel.
 > certified compliance tool. The current workflow uses hardcoded
 > mappings and deterministic rules; AI-assisted product matching is
 > planned, not implemented.
+
+Operable Futures: AI Systems for AEC · Research Studio: Smart Construction · MaAI01 · IAAC 2026/27 · **Team 9**
+
+**Stop non-compliant products reaching the spec.** SpecSynth AI extracts manufacturer data into material schedules, validates it against project requirements and links every value to its evidence.
+
+## Team
+
+- Fawad Saleem
+- Soumyajyoti Datta
+- Kazuko Nakao
+
+## AEC stage
+
+**Procurement & Off-Site Manufacturing** (materials, suppliers, prefabrication, logistics)
+
+## Problem brief
+
+BIM models are geometrically precise but are often populated with unverified, disconnected product data. A Revit wall can carry "Generic Wall Insulation, U-value: undefined" while the manufacturer's PDF states a specific product with λ = 0.020 W/(m·K). Checking these values by hand against project requirements is slow and error-prone, and specification errors are a major driver of design rework.
+
+- **User:** architects, specifiers and BIM coordinators checking product data before tender.
+- **Moment in the project:** product selection and approval, before the specification is issued.
+
+## Data brief
+
+| Source | Format | What it gives us | Gaps / limits |
+|---|---|---|---|
+| Manufacturer data sheets | PDF | Thermal conductivity (λ), fire rating, thickness | Layout varies by manufacturer; values may be missing or ambiguous |
+| Product catalogue | JSON (`products.json`) | Structured product records with source URL and verification status | Currently small and hand-entered |
+| BIM model | Revit | Wall types, compound-structure layers, materials, thicknesses | Materials often generic |
+| Project requirements | Hardcoded threshold (0.022 W/(m·K)) | Target limit for the thermal check | Not yet configurable; TODO: name the code or project source |
+
+## Heilmeier Catechism
+
+1. **What are you trying to do?** TODO
+2. **How is it done today, and what are the limits of current practice?** TODO
+3. **What is new in your approach and why do you think it will be successful?** TODO
+4. **Who cares? If you succeed, what difference will it make?** TODO
+5. **What are the risks?** TODO
+6. **How much will it cost?** TODO
+7. **How long will it take?** TODO
+8. **What are the mid-term and final "exams" to check for success?** TODO
 
 ## What it does
 
@@ -88,28 +126,39 @@ Revit wall and compound-structure layers
 
 ## Repository structure
 
-The wider project is organized as follows:
+This repository follows the studio's Spec-Driven Development layout:
 
 ``` text
-SpecSynth_AI/
-├── 00_Project_Documentation/
-├── 01_Revit/
-├── 02_RevitPlugin/
-│   └── SpecSynthAI/
-│       └── SpecSynthAI/
-│           ├── App.cs
-│           ├── Commands/
-│           │   ├── InspectElementCommand.cs
-│           │   ├── ExportScheduleCommand.cs
-│           │   └── ExportThermalScheduleCommand.cs
-│           ├── Models/
-│           ├── Requirements/
-│           ├── products.json
-│           ├── InspectElement.png
-│           └── ExportThermalSchedule.png
-├── 03_Product_Document_Extraction/
-├── 04_Product_Dataset/
-└── 05_Research_Experiments/
+research_studio_team_9/
+├── AGENTS.md                 # System constitution for the agent harness
+├── README.md                 # Problem & data brief, team, how to run
+├── spec/
+│   └── constitution/
+│       ├── mission.md
+│       ├── roadmap.md
+│       └── tech_stack.md
+├── src/                      # Features (Revit add-in code goes here)
+├── tests/                    # Tests, including the non-AI baseline comparison
+└── docs/
+    ├── BLOG_POST/            # IAAC blog post draft
+    ├── PITCH_DECK/           # Pitch deck and promo video
+    └── DEMO_OUTPUTS/         # Example Excel exports from the prototype
+```
+
+The Revit add-in source is planned to live under `src/` with this layout:
+
+``` text
+src/SpecSynthAI/
+├── App.cs
+├── Commands/
+│   ├── InspectElementCommand.cs
+│   ├── ExportScheduleCommand.cs
+│   └── ExportThermalScheduleCommand.cs
+├── Models/
+├── Requirements/
+├── products.json
+├── InspectElement.png
+└── ExportThermalSchedule.png
 ```
 
 `ExportScheduleCommand.cs` is reserved for future generic
@@ -134,7 +183,7 @@ building or deploying elsewhere.
 
 1.  Clone or download this repository.
 2.  Open the C# solution/project under
-    `02_RevitPlugin/SpecSynthAI/SpecSynthAI/`.
+    `src/SpecSynthAI/`.
 3.  Confirm the project references the Revit 2027 API assemblies
     installed on your machine.
 4.  Restore NuGet packages and build the project.
