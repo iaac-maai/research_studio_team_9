@@ -1,10 +1,9 @@
 # SpecSynth AI
 
-**A Revit add-in prototype for mapping BIM insulation materials to
-manufacturer product data and checking thermal-conductivity
-requirements.**
+**AI-powered Construction Product Intelligence and Design Verification**
+From manufacturer product information to evidence-based building design decisions.
 
-SpecSynth AI is being developed as part of the IAAC Research Studio. The
+SpecSynth AI is being developed as part of the IAAC Master's programme, Research Studio — Smart Construction, exploring the application of AI, BIM and computational methods to improve decision-making in the Architecture, Engineering and Construction industry. The
 current prototype connects Revit wall-layer information to a local JSON
 product catalogue, applies an explicit material-to-product mapping,
 checks a product property against a configured threshold, and exports a
@@ -30,6 +29,8 @@ Operable Futures: AI Systems for AEC · Research Studio: Smart Construction · M
 **Procurement & Off-Site Manufacturing** (materials, suppliers, prefabrication, logistics)
 
 ## Problem brief
+
+Construction product information is fragmented across manufacturer catalogues, technical datasheets and BIM models. Architects must manually interpret product specifications, connect them to building elements, verify project requirements and evaluate their impact on building performance.
 
 BIM models are geometrically precise but are often populated with unverified, disconnected product data. A Revit wall can carry "Generic Wall Insulation, U-value: undefined" while the manufacturer's PDF states a specific product with λ = 0.020 W/(m·K). Checking these values by hand against project requirements is slow and error-prone, and specification errors are a major driver of design rework.
 
