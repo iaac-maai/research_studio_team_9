@@ -1,0 +1,32 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "REQ-THERMAL-001",
+      "property_name": "ThermalConductivity",
+      "maximum_allowed_value": 0.022,
+      "unit": "W/(m·K)",
+      "description": "Maximum permitted thermal conductivity for this project"
+    },
+    {
+      "requirement_id": "REQ-THERMAL-002",
+      "property_name": "ExternalWallUValue",
+      "maximum_allowed_value": 0.30,
+      "unit": "W/(m²·K)",
+      "description": "Maximum permitted external wall U-value"
+    },
+    {
+      "requirement_id": "REQ-THERMAL-003",
+      "property_name": "InternalWallUValue",
+      "maximum_allowed_value": 0.60,
+      "unit": "W/(m²·K)",
+      "description": "Maximum permitted internal wall U-value"
+    },
+    {
+      "requirement_id": "REQ-THERMAL-004",
+      "property_name": "ModeratePerformanceTolerance",
+      "maximum_allowed_value": 10.0,
+      "unit": "%",
+      "description": "Tolerance above the target for moderate performance classification"
+    }
+  ]
+}

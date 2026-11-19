@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="02_RevitPlugin">
+    <Project Path="SpecSynthAI/SpecSynthAI.csproj" />
+  </Folder>
+  <Folder Name="06_AI_Performance_Engine">
+    <Project Path="../../06_AI_Performance_Engine/01_Thermal_Engine/ThermalEngine.csproj" />
+    <Project Path="../../06_AI_Performance_Engine/ThermalEngine.UI/ThermalEngine.UI.csproj" />
+  </Folder>
+  <Folder Name="07_Development_Tests">
+    <Project Path="../../07_Development_Tests/SpecSynthValidationTest/SpecSynthValidationTest.csproj" />
+    <Project Path="../../07_Development_Tests/SpecSynthValidationTest2/SpecSynthValidationTest2.csproj" />
+  </Folder>
+</Solution>
