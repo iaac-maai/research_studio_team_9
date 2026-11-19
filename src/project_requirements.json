@@ -1,0 +1,11 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "REQ-THERMAL-001",
+      "property_name": "ThermalConductivity",
+      "maximum_allowed_value": 0.022,
+      "unit": "W/(m·K)",
+      "description": "Maximum permitted thermal conductivity for this project"
+    }
+  ]
+}

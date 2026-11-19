@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "product_id": "MAGON_MASTER_BASIC_PIR_100",
+      "manufacturer": "Magon",
+      "product_name": "MASTER-BASIC",
+      "category": "PIR insulation board",
+      "thickness_mm": 100,
+      "thermal_conductivity_W_mK": 0.02,
+      "compressive_strength_kPa": 250,
+      "compressive_strength_tolerance_kPa": 50,
+      "reaction_to_fire": "F",
+      "source_url": "https://magon.es/en/products/insulation-boards/",
+      "source_document": "https://magon.es/descargas/masterpanel/en/CATALOGO-GENERAL-MASTERPANEL.pdf",
+      "verification_status": "verified",
+      "revit_material_name": "SSAI_PIR_Insulation",
+      "material_family": "PIR insulation",
+      "available_thicknesses_mm": [
+        50,
+        80,
+        100
+      ]
+    },
+    {
+      "product_id": "DEMO_INSULATION_BOARD_100",
+      "manufacturer": "Demo Manufacturer",
+      "product_name": "Demo Insulation Board",
+      "category": "Insulation board",
+      "thickness_mm": 100,
+      "thermal_conductivity_W_mK": 0.028,
+      "compressive_strength_kPa": 150,
+      "compressive_strength_tolerance_kPa": 20,
+      "reaction_to_fire": "Not verified",
+      "source_url": "",
+      "source_document": "",
+      "verification_status": "illustrative_demo_data",
+      "revit_material_name": "SSAI_Demo_Insulation",
+      "material_family": "Demo insulation",
+      "available_thicknesses_mm": []
+    }
+  ]
+}
