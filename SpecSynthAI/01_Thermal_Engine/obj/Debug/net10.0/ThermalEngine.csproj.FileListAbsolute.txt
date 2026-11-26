@@ -1,0 +1,12 @@
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\bin\Debug\net10.0\ThermalEngine.deps.json
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\bin\Debug\net10.0\ThermalEngine.dll
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\bin\Debug\net10.0\ThermalEngine.pdb
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ThermalEngine.GeneratedMSBuildEditorConfig.editorconfig
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ThermalEngine.AssemblyInfoInputs.cache
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ThermalEngine.AssemblyInfo.cs
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ThermalEngine.csproj.CoreCompileInputs.cache
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ThermalEngine.dll
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\refint\ThermalEngine.dll
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ThermalEngine.pdb
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ref\ThermalEngine.dll
+D:\02_LEARNING\02_Masters_IAAC_AI_Architecture\10-Term_01\03-Research Studio\SpecSynth_AI\06_AI_Performance_Engine\01_Thermal_Engine\obj\Debug\net10.0\ThermalE.BBF2D31B.Up2Date
