@@ -1,0 +1,17 @@
+{
+  "candidate_count": 75,
+  "master_product_count": 182,
+  "master_variant_count": 1941,
+  "exact_name_match_candidates": 4,
+  "exact_name_and_manufacturer_match_candidates": 2,
+  "exact_source_match_candidates": 2,
+  "fuzzy_similarity_candidates_score_ge_0_80": 7,
+  "all_candidates_pending_manual_review": true,
+  "auto_approvals": 0,
+  "database_open_mode": "read-only",
+  "database_modified": false,
+  "outputs": [
+    "D:\\02_LEARNING\\02_Masters_IAAC_AI_Architecture\\10-Term_01\\03-Research Studio\\SpecSynth_AI\\06_AI_Performance_Engine\\02_ML_Engine\\00_Data\\processed\\02_identity_reconciliation\\identity_match_results.csv",
+    "D:\\02_LEARNING\\02_Masters_IAAC_AI_Architecture\\10-Term_01\\03-Research Studio\\SpecSynth_AI\\06_AI_Performance_Engine\\02_ML_Engine\\00_Data\\processed\\02_identity_reconciliation\\approval_register.csv"
+  ]
+}

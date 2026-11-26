@@ -1,0 +1,57 @@
+{
+  "package_version": "1.0",
+  "purpose": "Non-destructive intake and reconciliation staging; no research candidates are ingested.",
+  "master_database": "00_Data/raw/master_v1.5.0/SpecSynth_Master_v1.0.sqlite",
+  "master_database_table_counts": {
+    "dataset_release": 1,
+    "products": 182,
+    "product_variants": 1941,
+    "sources": 150,
+    "product_source_links": 208,
+    "variant_source_links": 2002,
+    "manufacturer_assemblies": 77,
+    "thermal_baseline": 4753,
+    "synthetic_archetypes": 18,
+    "synthetic_variants": 216,
+    "multiobjective_scenarios": 1680,
+    "epd_products": 7,
+    "epd_gwp_modules": 63,
+    "epd_mapping": 7,
+    "epd_normalisation_rules": 7,
+    "ml_variant_records": 1941,
+    "quality_issues": 1,
+    "ingestion_log": 1
+  },
+  "research_candidate_count": 75,
+  "all_candidates_production_approved": false,
+  "production_approval_counts": {
+    "NOT_APPROVED": 75
+  },
+  "reconciliation_status_counts": {
+    "NO DIRECT PRODUCT/URL MATCH FOUND in supplied v1.5.0 products/sources": 67,
+    "RELATED NAME \u2014 possible family/name overlap; manual identity review": 3,
+    "EXACT PRODUCT NAME \u2014 manufacturer differs; manual identity review": 2,
+    "EXACT PRODUCT + MANUFACTURER MATCH \u2014 existing v1.5.0 product; do not create duplicate": 2,
+    "EXACT SOURCE URL MATCH \u2014 source already exists; inspect supported product identity": 1
+  },
+  "deep_reconciliation_decision_counts": {
+    "NO_DIRECT_MATCH_FOUND": 62,
+    "WEAK_NAME_SIMILARITY_MANUAL_REVIEW": 5,
+    "EXACT_PRODUCT_NAME_MATCH_REVIEW_MANUFACTURER": 4,
+    "POSSIBLE_NAME_ALIAS_MANUAL_REVIEW": 3,
+    "EXACT_SOURCE_MATCH_REVIEW_PRODUCT_IDENTITY": 1
+  },
+  "deep_approval_status_counts": {
+    "NOT_APPROVED": 75
+  },
+  "deep_ingestion_status_counts": {
+    "NOT_INGESTED": 75
+  },
+  "included_prior_sources": [
+    "00_Data/raw/insulation_research/batches_01_10/SpecSynth_Insulation_Consolidated_Research_Batches01-10_v1.0.csv",
+    "00_Data/raw/insulation_research/batches_01_10/SpecSynth_Insulation_Research_Pack_v0.1.xlsx",
+    "00_Data/raw/historical_ml/SpecSynth_ML_variants_v1.5.0.csv",
+    "00_Data/raw/historical_ml/SPLIT_AND_TARGETS_v1.5.0.json"
+  ],
+  "decision": "Keep all 75 candidates in research staging. Do not merge into production products/variants or ML dataset yet."
+}

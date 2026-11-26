@@ -1,0 +1,43 @@
+{
+  "master_database": "D:\\02_LEARNING\\02_Masters_IAAC_AI_Architecture\\10-Term_01\\03-Research Studio\\SpecSynth_AI\\06_AI_Performance_Engine\\02_ML_Engine\\00_Data\\raw\\master_v1.5.0\\SpecSynth_Master_v1.0.sqlite",
+  "master_table_counts": {
+    "dataset_release": 1,
+    "epd_gwp_modules": 63,
+    "epd_mapping": 7,
+    "epd_normalisation_rules": 7,
+    "epd_products": 7,
+    "ingestion_log": 1,
+    "manufacturer_assemblies": 77,
+    "ml_variant_records": 1941,
+    "multiobjective_scenarios": 1680,
+    "product_source_links": 208,
+    "product_variants": 1941,
+    "products": 182,
+    "quality_issues": 1,
+    "sources": 150,
+    "synthetic_archetypes": 18,
+    "synthetic_variants": 216,
+    "thermal_baseline": 4753,
+    "variant_source_links": 2002
+  },
+  "master_products": 182,
+  "master_variants": 1941,
+  "research_candidates": 75,
+  "reconciliation_decisions": {
+    "NO_DIRECT_MATCH_FOUND": 62,
+    "WEAK_NAME_SIMILARITY_MANUAL_REVIEW": 5,
+    "EXACT_PRODUCT_NAME_MATCH_REVIEW_MANUFACTURER": 4,
+    "POSSIBLE_NAME_ALIAS_MANUAL_REVIEW": 3,
+    "EXACT_SOURCE_MATCH_REVIEW_PRODUCT_IDENTITY": 1
+  },
+  "approval_status": {
+    "NOT_APPROVED": 75
+  },
+  "ingestion_status": {
+    "NOT_INGESTED": 75
+  },
+  "reconciliation_csv_rows": 75,
+  "database_modified": false,
+  "candidate_ingestion_performed": false,
+  "next_action": "Manually review candidate_review_queue.csv; only approved rows may enter a future master-candidate build."
+}

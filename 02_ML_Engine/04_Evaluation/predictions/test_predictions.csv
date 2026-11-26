@@ -1,0 +1,115 @@
+split_group_id,material_family,category,manufacturer,target_thermal_conductivity_W_mK,predicted_thermal_conductivity_W_mK,absolute_error_W_mK
+PROMAT_MASTERBOARD,calcium_silicate_board,Calcium silicate board,Promat,0.22,0.1985668896825399,0.02143311031746009
+PROMAT_MASTERBOARD,calcium_silicate_board,Calcium silicate board,Promat,0.22,0.19858688968253993,0.02141311031746007
+PROMAT_MASTERBOARD,calcium_silicate_board,Calcium silicate board,Promat,0.22,0.19974397539682562,0.020256024603174383
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.022998230303030123,1.7696969698763332e-06
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02301383030303012,1.3830303030121227e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02302683982683965,2.6839826839649555e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023028506493506316,2.8506493506316732e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02302731601731584,2.7316017315839186e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023033396969696793,3.339696969679312e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023033666666666487,3.3666666666487544e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023033666666666487,3.3666666666487544e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02304066666666649,4.0666666666491075e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023033166666666487,3.3166666666487044e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023031566666666486,3.156666666648614e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023031566666666486,3.156666666648614e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+15/194/992/10,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023039666666666486,3.9666666666486605e-05
+18/194/1370/4,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02301474458874441,1.4744588744411424e-05
+18/194/1370/4,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.022998230303030123,1.7696969698763332e-06
+18/194/1370/4,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02301383030303012,1.3830303030121227e-05
+18/194/1370/4,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02302683982683965,2.6839826839649555e-05
+18/194/1370/4,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.02302731601731584,2.7316017315839186e-05
+18/194/1370/4,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Huurre Ibérica S.A.,0.023,0.023033666666666487,3.3666666666487544e-05
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.0362872171409153,0.004287217140915296
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.0362872171409153,0.004287217140915296
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.036314217140915296,0.0043142171409152955
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03629888380758196,0.004298883807581956
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.036030614759962845,0.0040306147599628445
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.035893655236153295,0.003893655236153294
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.035858859998058046,0.003858859998058045
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03585921165750971,0.0038592116575097077
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03590541959401765,0.003905419594017648
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.0359183370543351,0.0039183370543351
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.0359486767368748,0.003948676736874802
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03593583460123266,0.00393583460123266
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03589266634726441,0.0038926663472644077
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.035904285394883446,0.0039042853948834458
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03605985047424856,0.004059850474248561
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03640951532018701,0.004409515320187012
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.036476004331176023,0.004476004331176023
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03650327234359839,0.0045032723435983885
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.036530739010265066,0.0045307390102650655
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03664862154994761,0.004648621549947607
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.036680788216614274,0.004680788216614273
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03672448429504565,0.004724484295045649
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03674648429504565,0.00474648429504565
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03682048429504564,0.004820484295045641
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.036868484295045634,0.004868484295045633
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.0369141509617123,0.004914150961712299
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.0369141509617123,0.004914150961712299
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.036930150961712295,0.004930150961712294
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.0369461509617123,0.0049461509617122965
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03700748429504563,0.005007484295045626
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.03700748429504563,0.005007484295045626
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.037055484295045626,0.005055484295045626
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.037055484295045626,0.005055484295045626
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.037087484295045624,0.005087484295045623
+02/016/156/24,glass_wool,Glass wool insulation (EN 13162),Knauf Insulation SPRL,0.032,0.037103484295045626,0.005103484295045625
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11531659815243238,0.004683401847567617
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11532466481909906,0.004675335180900936
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11534659815243237,0.004653401847567629
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11536076481909903,0.004639235180900966
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11539159815243237,0.004608401847567625
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11626009815243232,0.0037399018475676726
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11610481243814662,0.0038951875618533777
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11539159815243237,0.004608401847567625
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11610481243814662,0.0038951875618533777
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.1160654791048133,0.0039345208951866995
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11404412196195629,0.005955878038043705
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11424758862862296,0.005752411371377039
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11442858862862296,0.005571411371377039
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11356914418417857,0.0064308558158214235
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11337581085084522,0.006624189149154774
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11313231085084524,0.006867689149154754
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11442858862862296,0.005571411371377039
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11404412196195629,0.005955878038043705
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11337581085084522,0.006624189149154774
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11313231085084524,0.006867689149154754
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11296431085084524,0.007035689149154756
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11305764418417857,0.006942355815821422
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11296431085084524,0.007035689149154756
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11296881085084523,0.007031189149154765
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11296881085084523,0.007031189149154765
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11296881085084523,0.007031189149154765
+STORAENSO_CLT,CLT,Cross-laminated timber panel (EN 16351),Stora Enso Wood Products,0.12,0.11296881085084523,0.007031189149154765
+SGUK_GYPROC_SOUNDBLOC_MR,gypsum_board,"Plasterboard – Acoustic moisture-resistant plasterboard (EN 520 Type D, H1)",Saint-Gobain UK – British Gypsum,0.25,0.23427343650793714,0.01572656349206286
+SGUK_GLASROC_F_FIRECASE,gypsum_specialist_board,"Specialist board – Glass-reinforced gypsum board, non-combustible (EN 15283-1 GM-H1)",Saint-Gobain UK – British Gypsum,0.3,0.26004191825396816,0.039958081746031826
+SGUK_GLASROC_F_FIRECASE,gypsum_specialist_board,"Specialist board – Glass-reinforced gypsum board, non-combustible (EN 15283-1 GM-H1)",Saint-Gobain UK – British Gypsum,0.3,0.20922075317460304,0.09077924682539695
+SGUK_ISOVER_STEEL_FRAME_INFILL_BATT,glass_wool,Insulation – Glass mineral wool batt (EN 13162),Saint-Gobain UK – Isover UK,0.036,0.04072318942402624,0.00472318942402624
+MAGON_MASTERPANEL_MASTER_FRIGO_PIR,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Master Panel S.L. (Magon group),0.021,0.0209884773726275,1.1522627372501093e-05
+MAGON_MASTERPANEL_MASTER_FRIGO_PIR,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Master Panel S.L. (Magon group),0.021,0.020963277372627487,3.67226273725145e-05
+MAGON_MASTERPANEL_MASTER_FRIGO_PIR,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Master Panel S.L. (Magon group),0.021,0.02093781373626385,6.218626373614977e-05
+MAGON_MASTERPANEL_MASTER_FRIGO_PIR,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Master Panel S.L. (Magon group),0.021,0.02093981373626385,6.018626373615124e-05
+MAGON_MASTERPANEL_MASTER_FRIGO_PIR,PIR_sandwich_panel,Metal-faced insulating sandwich panel (EN 14509),Master Panel S.L. (Magon group),0.021,0.02093981373626385,6.018626373615124e-05

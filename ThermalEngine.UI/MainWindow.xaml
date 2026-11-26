@@ -1,0 +1,685 @@
+﻿<Window x:Class="ThermalEngine.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:ThermalEngine.UI.Views"
+        Title="SpecSynth | Thermal Performance"
+        Height="950"
+        Width="1400"
+        MinHeight="700"
+        MinWidth="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#F3F5F9">
+
+    <Window.Resources>
+
+        <SolidColorBrush x:Key="Navy" Color="#17243A"/>
+        <SolidColorBrush x:Key="Blue" Color="#4776E6"/>
+        <SolidColorBrush x:Key="Green" Color="#159B72"/>
+        <SolidColorBrush x:Key="TextDark" Color="#263449"/>
+        <SolidColorBrush x:Key="TextMuted" Color="#8490A3"/>
+
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="22"/>
+            <Setter Property="Margin" Value="8"/>
+        </Style>
+
+        <Style x:Key="SectionTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{StaticResource TextDark}"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <!-- ===================================== -->
+        <!-- SIDEBAR -->
+        <!-- ===================================== -->
+
+        <Border Grid.Column="0"
+                Background="{StaticResource Navy}">
+
+            <StackPanel Margin="22">
+
+                <TextBlock Text="SPECSYNTH"
+                           FontSize="23"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,15,0,5"/>
+
+                <TextBlock Text="DESIGN INTELLIGENCE"
+                           FontSize="9"
+                           Foreground="#9BAAC2"
+                           Margin="0,0,0,45"/>
+
+                <TextBlock Text="PERFORMANCE"
+                           Foreground="#9BAAC2"
+                           FontSize="10"
+                           Margin="0,0,0,15"/>
+
+                <Border Background="#30415C"
+                        CornerRadius="7"
+                        Padding="12"
+                        Margin="0,0,0,10">
+
+                    <TextBlock Text="◈  Thermal Analysis"
+                               Foreground="White"
+                               FontSize="13"/>
+
+                </Border>
+
+                <TextBlock Text="◈  Wall Comparison"
+                           Foreground="#C0CBDA"
+                           FontSize="13"
+                           Margin="12,12"/>
+
+                <TextBlock Text="◈  Material Analysis"
+                           Foreground="#C0CBDA"
+                           FontSize="13"
+                           Margin="12,12"/>
+
+                <TextBlock Text="◈  Reports"
+                           Foreground="#C0CBDA"
+                           FontSize="13"
+                           Margin="12,12"/>
+
+                <Border Height="1"
+                        Background="#40516B"
+                        Margin="0,30,0,20"/>
+
+                <TextBlock Text="SPECSYNTH AI"
+                           Foreground="#9BAAC2"
+                           FontSize="10"/>
+
+                <TextBlock Text="Performance Engine v1.0"
+                           Foreground="White"
+                           FontSize="11"
+                           Margin="0,8"/>
+
+            </StackPanel>
+
+        </Border>
+
+
+        <!-- ===================================== -->
+        <!-- MAIN CONTENT -->
+        <!-- ===================================== -->
+
+        <ScrollViewer Grid.Column="1"
+                      VerticalScrollBarVisibility="Auto">
+
+            <StackPanel Margin="25">
+
+
+                <!-- HEADER -->
+
+                <Grid Margin="8,10,8,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Thermal Performance"
+                                   FontSize="27"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource TextDark}"/>
+
+                        <TextBlock Text="Building performance analysis and design comparison"
+                                   Foreground="{StaticResource TextMuted}"
+                                   FontSize="13"
+                                   Margin="0,6"/>
+
+                    </StackPanel>
+
+                    <Border Background="#E6F5EF"
+                            CornerRadius="7"
+                            Padding="12,7"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center">
+
+                        <TextBlock Text="● ENGINE ACTIVE"
+                                   Foreground="#159B72"
+                                   FontWeight="SemiBold"
+                                   FontSize="11"/>
+
+                    </Border>
+
+                </Grid>
+
+
+                <!-- ===================================== -->
+                <!-- NEW: PROJECT OVERVIEW -->
+                <!-- ===================================== -->
+
+                <views:ProjectOverviewView
+                    Margin="0,5,0,10"/>
+
+
+                <!-- ===================================== -->
+                <!-- SELECTABLE COMPARISON BASELINE -->
+                <!-- ===================================== -->
+
+                <Border Style="{StaticResource CardStyle}"
+                        Margin="8,5,8,10">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+
+                            <TextBlock Text="COMPARISON BASELINE"
+                                       FontSize="11"
+                                       FontWeight="SemiBold"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock Text="Select reference wall assembly"
+                                       FontSize="12"
+                                       Foreground="{StaticResource TextDark}"
+                                       Margin="0,6,0,0"/>
+
+                        </StackPanel>
+
+                        <ComboBox Grid.Column="1"
+                                  ItemsSource="{Binding BaselineOptions}"
+                                  SelectedItem="{Binding SelectedBaselineAssembly, Mode=TwoWay}"
+                                  DisplayMemberPath="AssemblyName"
+                                  Height="38"
+                                  VerticalContentAlignment="Center"
+                                  FontSize="12"
+                                  Padding="8"
+                                  Background="#F3F5F9"
+                                  BorderBrush="#DCE2EC"/>
+
+                    </Grid>
+
+                </Border>
+
+
+                <!-- ===================================== -->
+                <!-- EXISTING KPI CARDS -->
+                <!-- ===================================== -->
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- ASSEMBLY COUNT -->
+
+                    <Border Grid.Column="0"
+                            Style="{StaticResource CardStyle}">
+
+                        <StackPanel>
+
+                            <TextBlock Text="ASSEMBLIES ANALYSED"
+                                       FontSize="11"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock Text="{Binding AssemblyCount, StringFormat={}{0:D2}}"
+                                       FontSize="32"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource TextDark}"
+                                       Margin="0,10"/>
+
+                            <TextBlock Text="Valid wall assemblies"
+                                       FontSize="11"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- BEST U-VALUE -->
+
+                    <Border Grid.Column="1"
+                            Style="{StaticResource CardStyle}">
+
+                        <StackPanel>
+
+                            <TextBlock Text="BEST U-VALUE"
+                                       FontSize="11"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock Text="{Binding BestUValue, StringFormat={}{0:F4}}"
+                                       FontSize="32"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource Green}"
+                                       Margin="0,10"/>
+
+                            <TextBlock Text="W/(m²K)"
+                                       FontSize="11"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- IMPROVEMENT -->
+
+                    <Border Grid.Column="2"
+                            Style="{StaticResource CardStyle}">
+
+                        <StackPanel>
+
+                            <TextBlock Text="PERFORMANCE IMPROVEMENT"
+                                       FontSize="11"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock Text="{Binding BestImprovement, StringFormat={}{0:F2}%}"
+                                       FontSize="32"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource Blue}"
+                                       Margin="0,10"/>
+
+                            <TextBlock Text="Compared with baseline"
+                                       FontSize="11"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Grid>
+
+
+                <!-- ===================================== -->
+                <!-- SELECTED ASSEMBLY PERFORMANCE -->
+                <!-- ===================================== -->
+
+                <Border Style="{StaticResource CardStyle}"
+                        Margin="8,10,8,10">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Selected Assembly Performance"
+                                   Style="{StaticResource SectionTitle}"/>
+
+                        <TextBlock Text="{Binding SelectedAssemblyName}"
+                                   FontSize="19"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource Blue}"
+                                   Margin="0,0,0,18"/>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <!-- U VALUE -->
+
+                            <StackPanel Grid.Column="0">
+
+                                <TextBlock Text="U-VALUE"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                                <TextBlock Text="{Binding SelectedAssemblyUValue, StringFormat={}{0:F4}}"
+                                           FontSize="23"
+                                           FontWeight="Bold"
+                                           Foreground="{StaticResource Green}"
+                                           Margin="0,6,0,0"/>
+
+                                <TextBlock Text="W/(m²K)"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                            </StackPanel>
+
+
+                            <!-- TOTAL RESISTANCE -->
+
+                            <StackPanel Grid.Column="1">
+
+                                <TextBlock Text="TOTAL RESISTANCE"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                                <TextBlock Text="{Binding SelectedAssemblyTotalResistance, StringFormat={}{0:F4}}"
+                                           FontSize="23"
+                                           FontWeight="Bold"
+                                           Foreground="{StaticResource TextDark}"
+                                           Margin="0,6,0,0"/>
+
+                                <TextBlock Text="m²K/W"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                            </StackPanel>
+
+
+                            <!-- IMPROVEMENT -->
+
+                            <StackPanel Grid.Column="2">
+
+                                <TextBlock Text="IMPROVEMENT"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                                <TextBlock Text="{Binding SelectedAssemblyImprovement, StringFormat={}{0:F2}%}"
+                                           FontSize="23"
+                                           FontWeight="Bold"
+                                           Foreground="{StaticResource Blue}"
+                                           Margin="0,6,0,0"/>
+
+                                <TextBlock Text="Against baseline"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                            </StackPanel>
+
+
+                            <!-- RANK -->
+
+                            <StackPanel Grid.Column="3">
+
+                                <TextBlock Text="PERFORMANCE RANK"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                                <TextBlock Text="{Binding SelectedAssemblyRank, StringFormat={}#{0:D2}}"
+                                           FontSize="23"
+                                           FontWeight="Bold"
+                                           Foreground="{StaticResource TextDark}"
+                                           Margin="0,6,0,0"/>
+
+                                <TextBlock Text="Among valid assemblies"
+                                           FontSize="10"
+                                           Foreground="{StaticResource TextMuted}"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ===================================== -->
+                <!-- COMPARISON CHART AND BEST ASSEMBLY -->
+                <!-- ===================================== -->
+
+                <Grid Margin="0,10,0,0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- COMPARISON CHART -->
+
+                    <Border Grid.Column="0"
+                            Style="{StaticResource CardStyle}">
+
+                        <StackPanel>
+
+                            <TextBlock Text="Wall Assembly Comparison"
+                                       Style="{StaticResource SectionTitle}"/>
+
+                            <TextBlock Text="U-value (W/m²K) — Lower is better"
+                                       Foreground="{StaticResource TextMuted}"
+                                       FontSize="11"
+                                       Margin="0,0,0,20"/>
+
+                            <ItemsControl ItemsSource="{Binding Assemblies}">
+
+                                <ItemsControl.ItemTemplate>
+
+                                    <DataTemplate>
+
+                                        <StackPanel Margin="0,0,0,17">
+
+                                            <TextBlock Text="{Binding AssemblyName}"
+                                                       FontSize="12"
+                                                       Foreground="{StaticResource TextDark}"
+                                                       Margin="0,0,0,6"/>
+
+                                            <Grid Height="24">
+
+                                                <Border Background="#EDF0F5"
+                                                        CornerRadius="5"/>
+
+                                                <ProgressBar
+                                                    Value="{Binding UValue}"
+                                                    Maximum="{Binding DataContext.BaselineUValue,
+                                                    RelativeSource={RelativeSource AncestorType=Window}}"
+                                                    Minimum="0"
+                                                    Height="24"
+                                                    VerticalAlignment="Center"
+                                                    BorderThickness="0"
+                                                    Background="Transparent"
+                                                    Foreground="{Binding PerformanceColor}"/>
+
+                                                <TextBlock Text="{Binding UValue, StringFormat={}{0:F4}}"
+                                                           HorizontalAlignment="Right"
+                                                           VerticalAlignment="Center"
+                                                           FontWeight="SemiBold"
+                                                           FontSize="11"
+                                                           Foreground="{StaticResource TextDark}"
+                                                           Margin="0,0,5,0"/>
+
+                                            </Grid>
+
+                                        </StackPanel>
+
+                                    </DataTemplate>
+
+                                </ItemsControl.ItemTemplate>
+
+                            </ItemsControl>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- BEST PERFORMER -->
+
+                    <Border Grid.Column="1"
+                            Style="{StaticResource CardStyle}">
+
+                        <StackPanel>
+
+                            <TextBlock Text="BEST PERFORMER"
+                                       Foreground="{StaticResource TextMuted}"
+                                       FontSize="11"/>
+
+                            <TextBlock Text="★"
+                                       FontSize="38"
+                                       Foreground="#E7A93B"
+                                       Margin="0,20,0,10"/>
+
+                            <TextBlock Text="{Binding BestAssemblyName}"
+                                       FontSize="22"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource TextDark}"
+                                       TextWrapping="Wrap"/>
+
+                            <TextBlock Text="Highest thermal performance"
+                                       FontSize="12"
+                                       Foreground="{StaticResource TextMuted}"
+                                       Margin="0,8,0,20"/>
+
+                            <Border Background="#E6F5EF"
+                                    CornerRadius="8"
+                                    Padding="12">
+
+                                <StackPanel>
+
+                                    <TextBlock Text="U-VALUE"
+                                               FontSize="10"
+                                               Foreground="#159B72"/>
+
+                                    <TextBlock Text="{Binding BestUValue, StringFormat={}{0:F4} W/(m²K)}"
+                                               FontSize="17"
+                                               FontWeight="Bold"
+                                               Foreground="#159B72"/>
+
+                                </StackPanel>
+
+                            </Border>
+
+                            <TextBlock Text="{Binding BestImprovement, StringFormat={}{0:F2}% improvement}"
+                                       Foreground="{StaticResource Green}"
+                                       FontWeight="SemiBold"
+                                       FontSize="12"
+                                       Margin="0,18,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Grid>
+
+
+                <!-- ===================================== -->
+                <!-- MATERIAL LAYER ANALYSIS -->
+                <!-- ===================================== -->
+
+                <views:LayerAnalysisView/>
+
+
+                <!-- ===================================== -->
+                <!-- ASSEMBLY PERFORMANCE TABLE -->
+                <!-- ===================================== -->
+
+                <Border Style="{StaticResource CardStyle}"
+                        Margin="8,10,8,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Assembly Performance Details"
+                                   Style="{StaticResource SectionTitle}"/>
+
+
+                        <!-- TABLE HEADER -->
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                       Text="ASSEMBLY"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock Grid.Column="1"
+                                       Text="U-VALUE"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock Grid.Column="2"
+                                       Text="IMPROVEMENT"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock Grid.Column="3"
+                                       Text="RANK"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                        </Grid>
+
+                        <Border Height="1"
+                                Background="#E9EDF3"
+                                Margin="0,12"/>
+
+
+                        <!-- DYNAMIC TABLE ROWS -->
+
+                        <ItemsControl ItemsSource="{Binding Assemblies}">
+
+                            <ItemsControl.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <Grid Margin="0,10">
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Grid.Column="0"
+                                                   Text="{Binding AssemblyName}"
+                                                   FontSize="12"
+                                                   Foreground="{StaticResource TextDark}"/>
+
+                                        <TextBlock Grid.Column="1"
+                                                   Text="{Binding UValue, StringFormat={}{0:F4}}"
+                                                   FontSize="12"
+                                                   FontWeight="SemiBold"/>
+
+                                        <TextBlock Grid.Column="2"
+                                                   Text="{Binding ImprovementPercentage, StringFormat={}{0:F2}%}"
+                                                   FontSize="12"
+                                                   Foreground="{StaticResource Green}"/>
+
+                                        <TextBlock Grid.Column="3"
+                                                   Text="{Binding Rank, StringFormat={}{0:D2}}"
+                                                   FontWeight="Bold"
+                                                   FontSize="12"/>
+
+                                    </Grid>
+
+                                </DataTemplate>
+
+                            </ItemsControl.ItemTemplate>
+
+                        </ItemsControl>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- FOOTER -->
+
+                <TextBlock Text="SpecSynth AI | Thermal Performance Engine"
+                           Foreground="{StaticResource TextMuted}"
+                           FontSize="10"
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,15"/>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Window>

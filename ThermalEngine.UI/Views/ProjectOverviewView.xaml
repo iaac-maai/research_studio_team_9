@@ -1,0 +1,497 @@
+<UserControl x:Class="ThermalEngine.UI.Views.ProjectOverviewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <UserControl.Resources>
+
+        <!-- ================================= -->
+        <!-- OVERVIEW CARD STYLE -->
+        <!-- ================================= -->
+
+        <Style x:Key="OverviewCard"
+               TargetType="Border">
+
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="Margin" Value="8"/>
+
+        </Style>
+
+
+        <!-- ================================= -->
+        <!-- METRIC LABEL -->
+        <!-- ================================= -->
+
+        <Style x:Key="MetricLabel"
+               TargetType="TextBlock">
+
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Foreground" Value="#8490A3"/>
+
+        </Style>
+
+
+        <!-- ================================= -->
+        <!-- METRIC VALUE -->
+        <!-- ================================= -->
+
+        <Style x:Key="MetricValue"
+               TargetType="TextBlock">
+
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#263449"/>
+            <Setter Property="Margin" Value="0,8,0,0"/>
+
+        </Style>
+
+
+        <!-- ================================= -->
+        <!-- DATAGRID HEADER -->
+        <!-- ================================= -->
+
+        <Style x:Key="ClassificationHeader"
+               TargetType="DataGridColumnHeader">
+
+            <Setter Property="Background" Value="#172B4D"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+        </Style>
+
+
+        <!-- ================================= -->
+        <!-- DATAGRID CELL -->
+        <!-- ================================= -->
+
+        <Style x:Key="ClassificationCell"
+               TargetType="DataGridCell">
+
+            <Setter Property="Padding" Value="7,9"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="Foreground" Value="#344054"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="BorderBrush" Value="#EDF0F4"/>
+
+        </Style>
+
+
+        <!-- ================================= -->
+        <!-- CLASSIFICATION STATUS BADGE -->
+        <!-- ================================= -->
+
+        <Style x:Key="StatusBadge"
+               TargetType="TextBlock">
+
+            <Setter Property="FontSize" Value="9"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="7,4"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#667085"/>
+            <Setter Property="Background" Value="#EDF0F4"/>
+
+            <Style.Triggers>
+
+                <DataTrigger Binding="{Binding ThermalClassificationStatus}"
+                             Value="GOOD">
+
+                    <Setter Property="Foreground" Value="#087A53"/>
+                    <Setter Property="Background" Value="#DDF5EA"/>
+
+                </DataTrigger>
+
+
+                <DataTrigger Binding="{Binding ThermalClassificationStatus}"
+                             Value="MODERATE">
+
+                    <Setter Property="Foreground" Value="#A56A00"/>
+                    <Setter Property="Background" Value="#FFF0D1"/>
+
+                </DataTrigger>
+
+
+                <DataTrigger Binding="{Binding ThermalClassificationStatus}"
+                             Value="POOR">
+
+                    <Setter Property="Foreground" Value="#B42318"/>
+                    <Setter Property="Background" Value="#FDE3E1"/>
+
+                </DataTrigger>
+
+
+                <DataTrigger Binding="{Binding ThermalClassificationStatus}"
+                             Value="NOT ANALYSED">
+
+                    <Setter Property="Foreground" Value="#667085"/>
+                    <Setter Property="Background" Value="#EDF0F4"/>
+
+                </DataTrigger>
+
+
+                <DataTrigger Binding="{Binding ThermalClassificationStatus}"
+                             Value="UNSUPPORTED">
+
+                    <Setter Property="Foreground" Value="#475467"/>
+                    <Setter Property="Background" Value="#E4E7EC"/>
+
+                </DataTrigger>
+
+            </Style.Triggers>
+
+        </Style>
+
+    </UserControl.Resources>
+
+
+    <!-- ================================= -->
+    <!-- MAIN CONTENT -->
+    <!-- No nested ScrollViewer -->
+    <!-- ================================= -->
+
+    <StackPanel>
+
+
+        <!-- ================================= -->
+        <!-- PROJECT INFORMATION -->
+        <!-- ================================= -->
+
+        <Border Style="{StaticResource OverviewCard}">
+
+            <StackPanel>
+
+                <TextBlock Text="PROJECT OVERVIEW"
+                           FontSize="11"
+                           FontWeight="SemiBold"
+                           Foreground="#8490A3"/>
+
+                <TextBlock Text="{Binding ProjectName}"
+                           FontSize="21"
+                           FontWeight="Bold"
+                           Foreground="#263449"
+                           Margin="0,8,0,4"/>
+
+                <TextBlock Text="{Binding ExportDate,
+                                  StringFormat=Last exported: {0:dd MMM yyyy, HH:mm}}"
+                           FontSize="11"
+                           Foreground="#8490A3"/>
+
+            </StackPanel>
+
+        </Border>
+
+
+        <!-- ================================= -->
+        <!-- MODEL STATISTICS -->
+        <!-- ================================= -->
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!-- PLACED WALLS -->
+
+            <Border Grid.Column="0"
+                    Style="{StaticResource OverviewCard}">
+
+                <StackPanel>
+
+                    <TextBlock Text="PLACED WALLS"
+                               Style="{StaticResource MetricLabel}"/>
+
+                    <TextBlock Text="{Binding TotalPlacedWalls}"
+                               Style="{StaticResource MetricValue}"/>
+
+                    <TextBlock Text="Wall instances"
+                               FontSize="10"
+                               Foreground="#8490A3"/>
+
+                </StackPanel>
+
+            </Border>
+
+
+            <!-- UNIQUE WALL TYPES -->
+
+            <Border Grid.Column="1"
+                    Style="{StaticResource OverviewCard}">
+
+                <StackPanel>
+
+                    <TextBlock Text="UNIQUE WALL TYPES"
+                               Style="{StaticResource MetricLabel}"/>
+
+                    <TextBlock Text="{Binding UniqueWallTypes}"
+                               Style="{StaticResource MetricValue}"/>
+
+                    <TextBlock Text="Distinct assemblies"
+                               FontSize="10"
+                               Foreground="#8490A3"/>
+
+                </StackPanel>
+
+            </Border>
+
+
+            <!-- VALID CALCULATIONS -->
+
+            <Border Grid.Column="2"
+                    Style="{StaticResource OverviewCard}">
+
+                <StackPanel>
+
+                    <TextBlock Text="VALID CALCULATIONS"
+                               Style="{StaticResource MetricLabel}"/>
+
+                    <TextBlock Text="{Binding ValidAssemblyCount}"
+                               Style="{StaticResource MetricValue}"
+                               Foreground="#159B72"/>
+
+                    <TextBlock Text="Thermal assemblies"
+                               FontSize="10"
+                               Foreground="#8490A3"/>
+
+                </StackPanel>
+
+            </Border>
+
+        </Grid>
+
+
+        <!-- ================================= -->
+        <!-- DATA EXTRACTION AND QUALITY -->
+        <!-- ================================= -->
+
+        <Border Style="{StaticResource OverviewCard}">
+
+            <StackPanel>
+
+                <TextBlock Text="DATA EXTRACTION &amp; QUALITY"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#263449"
+                           Margin="0,0,0,15"/>
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- SUCCESSFUL EXTRACTIONS -->
+
+                    <StackPanel Grid.Column="0"
+                                Margin="0,0,12,0">
+
+                        <TextBlock Text="SUCCESSFUL EXTRACTIONS"
+                                   Style="{StaticResource MetricLabel}"
+                                   TextWrapping="Wrap"/>
+
+                        <TextBlock Text="{Binding SuccessfulExtractions}"
+                                   FontSize="21"
+                                   FontWeight="Bold"
+                                   Foreground="#159B72"
+                                   Margin="0,8"/>
+
+                    </StackPanel>
+
+
+                    <!-- FAILED EXTRACTIONS -->
+
+                    <StackPanel Grid.Column="1"
+                                Margin="0,0,12,0">
+
+                        <TextBlock Text="FAILED EXTRACTIONS"
+                                   Style="{StaticResource MetricLabel}"
+                                   TextWrapping="Wrap"/>
+
+                        <TextBlock Text="{Binding FailedExtractions}"
+                                   FontSize="21"
+                                   FontWeight="Bold"
+                                   Foreground="#D96B6B"
+                                   Margin="0,8"/>
+
+                    </StackPanel>
+
+
+                    <!-- INVALID CALCULATIONS -->
+
+                    <StackPanel Grid.Column="2"
+                                Margin="0,0,12,0">
+
+                        <TextBlock Text="INVALID CALCULATIONS"
+                                   Style="{StaticResource MetricLabel}"
+                                   TextWrapping="Wrap"/>
+
+                        <TextBlock Text="{Binding InvalidAssemblyCount}"
+                                   FontSize="21"
+                                   FontWeight="Bold"
+                                   Foreground="#D99B35"
+                                   Margin="0,8"/>
+
+                    </StackPanel>
+
+
+                    <!-- UNSUPPORTED WALLS -->
+
+                    <StackPanel Grid.Column="3">
+
+                        <TextBlock Text="UNSUPPORTED WALLS"
+                                   Style="{StaticResource MetricLabel}"
+                                   TextWrapping="Wrap"/>
+
+                        <TextBlock Text="{Binding UnsupportedAssemblyCount}"
+                                   FontSize="21"
+                                   FontWeight="Bold"
+                                   Foreground="#8490A3"
+                                   Margin="0,8"/>
+
+                    </StackPanel>
+
+                </Grid>
+
+            </StackPanel>
+
+        </Border>
+
+
+        <!-- ================================= -->
+        <!-- WALL THERMAL CLASSIFICATION -->
+        <!-- ================================= -->
+
+        <Border Style="{StaticResource OverviewCard}"
+                Padding="14">
+
+            <StackPanel>
+
+                <TextBlock Text="WALL THERMAL CLASSIFICATION"
+                           FontSize="13"
+                           FontWeight="Bold"
+                           Foreground="#263449"/>
+
+                <TextBlock Text="Project-level thermal performance by wall type"
+                           FontSize="10"
+                           Foreground="#8490A3"
+                           Margin="0,5,0,14"/>
+
+
+                <!-- CLASSIFICATION TABLE -->
+
+                <DataGrid ItemsSource="{Binding WallRecords}"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          CanUserReorderColumns="True"
+                          CanUserResizeColumns="True"
+                          CanUserSortColumns="True"
+                          HeadersVisibility="Column"
+                          GridLinesVisibility="None"
+                          RowHeaderWidth="0"
+                          Background="White"
+                          BorderThickness="0"
+                          ColumnHeaderStyle="{StaticResource ClassificationHeader}"
+                          CellStyle="{StaticResource ClassificationCell}"
+                          MinHeight="180"
+                          MaxHeight="420"
+                          HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Disabled"
+                          ScrollViewer.CanContentScroll="False">
+
+                    <DataGrid.Columns>
+
+
+                        <!-- WALL TYPE -->
+
+                        <DataGridTextColumn Header="WALL TYPE"
+                                            Binding="{Binding WallTypeName}"
+                                            Width="190"/>
+
+
+                        <!-- FUNCTION -->
+
+                        <DataGridTextColumn Header="FUNCTION"
+                                            Binding="{Binding WallFunctionDisplay}"
+                                            Width="90"/>
+
+
+                        <!-- INSTANCES -->
+
+                        <DataGridTextColumn Header="INSTANCES"
+                                            Binding="{Binding InstanceCountDisplay}"
+                                            Width="75"/>
+
+
+                        <!-- U-VALUE -->
+
+                        <DataGridTextColumn Header="U-VALUE"
+                                            Binding="{Binding UValueDisplay}"
+                                            Width="75"/>
+
+
+                        <!-- TARGET -->
+
+                        <DataGridTextColumn Header="TARGET"
+                                            Binding="{Binding TargetUValueDisplay}"
+                                            Width="75"/>
+
+
+                        <!-- STATUS -->
+
+                        <DataGridTemplateColumn Header="STATUS"
+                                                Width="115">
+
+                            <DataGridTemplateColumn.CellTemplate>
+
+                                <DataTemplate>
+
+                                    <TextBlock Text="{Binding ThermalClassificationStatus}"
+                                               Style="{StaticResource StatusBadge}"/>
+
+                                </DataTemplate>
+
+                            </DataGridTemplateColumn.CellTemplate>
+
+                        </DataGridTemplateColumn>
+
+
+                        <!-- EXPLANATION -->
+
+                        <DataGridTextColumn Header="EXPLANATION"
+                                            Binding="{Binding ThermalClassificationExplanation}"
+                                            Width="260"/>
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+
+                <!-- TABLE INFORMATION -->
+
+                <TextBlock Text="U-values are expressed in W/(m²·K). Targets are taken from the project requirements."
+                           FontSize="9"
+                           Foreground="#98A2B3"
+                           TextWrapping="Wrap"
+                           Margin="0,12,0,0"/>
+
+            </StackPanel>
+
+        </Border>
+
+
+    </StackPanel>
+
+</UserControl>

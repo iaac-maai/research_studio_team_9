@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../01_Thermal_Engine/ThermalEngine.csproj" />
+  <Project Path="../ThermalEngine.UI/ThermalEngine.UI.csproj" />
+  <Project Path="ThermalEngine.Test/ThermalEngine.Test.csproj" />
+</Solution>

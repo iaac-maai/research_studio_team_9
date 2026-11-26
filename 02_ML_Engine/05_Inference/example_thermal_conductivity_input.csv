@@ -1,0 +1,2 @@
+material_category_group,material_family,category,thickness_mm,density_kg_m3,specific_heat_J_kgK,vapour_resistance_factor_mu,compressive_strength_kPa,tensile_strength_perpendicular_kPa,reaction_to_fire,euroclass_main
+insulation,mineral_wool,stone_wool,100,,,,,,A1,A1

@@ -1,0 +1,35 @@
+{
+  "project": "SpecSynth AI",
+  "model": "Thermal conductivity regression",
+  "version": "1.2.0",
+  "dataset": "00_Data/processed/SpecSynth_ML_variants_v1.5.0.csv",
+  "target": "target_thermal_conductivity_W_mK",
+  "split_column": "recommended_split",
+  "group_column": "split_group_id",
+  "numeric_features": [
+    "thickness_mm",
+    "density_kg_m3",
+    "specific_heat_J_kgK",
+    "vapour_resistance_factor_mu",
+    "compressive_strength_kPa",
+    "tensile_strength_perpendicular_kPa"
+  ],
+  "categorical_features": [
+    "material_category_group",
+    "material_family",
+    "category",
+    "reaction_to_fire",
+    "euroclass_main"
+  ],
+  "excluded_leakage_columns": [
+    "thermal_conductivity_W_mK",
+    "thermal_resistance_m2K_W",
+    "target_thermal_conductivity_W_mK",
+    "record_id",
+    "product_id",
+    "variant_id",
+    "split_group_id",
+    "recommended_split"
+  ],
+  "notes": "The model must not use measured conductivity or thermal resistance as predictors when predicting target thermal conductivity. Review the dataset version before training."
+}

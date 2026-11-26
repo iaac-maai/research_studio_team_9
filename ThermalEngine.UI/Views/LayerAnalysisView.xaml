@@ -1,0 +1,513 @@
+<UserControl x:Class="ThermalEngine.UI.Views.LayerAnalysisView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="TextDark" Color="#263449"/>
+        <SolidColorBrush x:Key="TextMuted" Color="#8490A3"/>
+        <SolidColorBrush x:Key="Green" Color="#159B72"/>
+        <SolidColorBrush x:Key="Blue" Color="#4776E6"/>
+
+        <BooleanToVisibilityConverter
+            x:Key="BoolToVisibilityConverter"/>
+
+    </UserControl.Resources>
+
+
+    <Border Background="White"
+            CornerRadius="12"
+            Padding="22"
+            Margin="8,10,8,10">
+
+        <StackPanel>
+
+            <!-- HEADER -->
+
+            <TextBlock Text="Material Layer Analysis"
+                       FontSize="19"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource TextDark}"/>
+
+            <TextBlock
+                Text="Inspect material properties, thermal resistance and conductivity sources"
+                FontSize="12"
+                Foreground="{StaticResource TextMuted}"
+                Margin="0,6,0,18"/>
+
+
+            <!-- ASSEMBLY SELECTOR -->
+
+            <Grid Margin="0,0,0,20">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0"
+                           Text="WALL ASSEMBLY"
+                           FontSize="11"
+                           FontWeight="SemiBold"
+                           Foreground="{StaticResource TextMuted}"
+                           VerticalAlignment="Center"
+                           Margin="0,0,20,0"/>
+
+                <ComboBox Grid.Column="1"
+                          ItemsSource="{Binding Assemblies}"
+                          SelectedItem="{Binding SelectedAssembly, Mode=TwoWay}"
+                          DisplayMemberPath="AssemblyName"
+                          Height="38"
+                          Padding="8"
+                          FontSize="12"
+                          Background="#F3F5F9"
+                          BorderBrush="#DCE2EA"
+                          Foreground="{StaticResource TextDark}"/>
+
+            </Grid>
+
+
+            <!-- SELECTED ASSEMBLY NAME -->
+
+            <TextBlock Text="{Binding SelectedAssemblyName}"
+                       FontSize="14"
+                       FontWeight="SemiBold"
+                       Foreground="{StaticResource Blue}"
+                       Margin="0,0,0,18"
+                       TextWrapping="Wrap"/>
+
+
+            <!-- ================================== -->
+            <!-- INVALID / UNSUPPORTED STATUS -->
+            <!-- ================================== -->
+
+            <Border
+                Background="#FFF8E8"
+                BorderBrush="#F0DCA9"
+                BorderThickness="1"
+                CornerRadius="10"
+                Padding="18"
+                Margin="0,0,0,15"
+                Visibility="{Binding ShowStatusPanel,
+                    Converter={StaticResource BoolToVisibilityConverter}}">
+
+                <StackPanel>
+
+                    <TextBlock
+                        Text="{Binding SelectedAssemblyStatus}"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="{Binding SelectedAssemblyStatusColor}"/>
+
+                    <TextBlock
+                        Text="{Binding SelectedAssemblyStatusMessage}"
+                        FontSize="12"
+                        Foreground="{StaticResource TextDark}"
+                        TextWrapping="Wrap"
+                        Margin="0,8,0,0"/>
+
+                    <TextBlock
+                        Text="Thermal performance results are hidden because a valid calculation is not available."
+                        FontSize="11"
+                        Foreground="{StaticResource TextMuted}"
+                        TextWrapping="Wrap"
+                        Margin="0,10,0,0"/>
+
+                </StackPanel>
+
+            </Border>
+
+
+            <!-- ================================== -->
+            <!-- VALID THERMAL RESULTS -->
+            <!-- ================================== -->
+
+            <StackPanel
+                Visibility="{Binding ShowThermalResults,
+                    Converter={StaticResource BoolToVisibilityConverter}}">
+
+
+                <!-- RESISTANCE BREAKDOWN -->
+
+                <TextBlock Text="THERMAL RESISTANCE BREAKDOWN"
+                           FontSize="11"
+                           FontWeight="Bold"
+                           Foreground="{StaticResource TextMuted}"
+                           Margin="0,0,0,10"/>
+
+
+                <Grid Margin="0,0,0,20">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- MATERIAL RESISTANCE -->
+
+                    <Border Grid.Column="0"
+                            Background="#E6F5EF"
+                            CornerRadius="8"
+                            Padding="12"
+                            Margin="0,0,6,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="MATERIAL LAYERS"
+                                       FontSize="9"
+                                       Foreground="#159B72"
+                                       TextWrapping="Wrap"/>
+
+                            <TextBlock
+                                Text="{Binding SelectedAssemblyLayerResistance,
+                                StringFormat={}{0:F4}}"
+                                FontSize="19"
+                                FontWeight="Bold"
+                                Foreground="#159B72"
+                                Margin="0,7,0,2"/>
+
+                            <TextBlock Text="m²·K/W"
+                                       FontSize="9"
+                                       Foreground="#159B72"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- INTERNAL SURFACE -->
+
+                    <Border Grid.Column="1"
+                            Background="#EEF3FF"
+                            CornerRadius="8"
+                            Padding="12"
+                            Margin="3,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="INTERNAL SURFACE (Rsi)"
+                                       FontSize="9"
+                                       Foreground="#4776E6"
+                                       TextWrapping="Wrap"/>
+
+                            <TextBlock
+                                Text="{Binding SelectedAssemblyInternalSurfaceResistance,
+                                StringFormat={}{0:F4}}"
+                                FontSize="19"
+                                FontWeight="Bold"
+                                Foreground="#4776E6"
+                                Margin="0,7,0,2"/>
+
+                            <TextBlock Text="m²·K/W"
+                                       FontSize="9"
+                                       Foreground="#4776E6"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- EXTERNAL SURFACE -->
+
+                    <Border Grid.Column="2"
+                            Background="#F3F5F9"
+                            CornerRadius="8"
+                            Padding="12"
+                            Margin="3,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="EXTERNAL SURFACE (Rse)"
+                                       FontSize="9"
+                                       Foreground="#8490A3"
+                                       TextWrapping="Wrap"/>
+
+                            <TextBlock
+                                Text="{Binding SelectedAssemblyExternalSurfaceResistance,
+                                StringFormat={}{0:F4}}"
+                                FontSize="19"
+                                FontWeight="Bold"
+                                Foreground="#263449"
+                                Margin="0,7,0,2"/>
+
+                            <TextBlock Text="m²·K/W"
+                                       FontSize="9"
+                                       Foreground="#8490A3"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- TOTAL RESISTANCE -->
+
+                    <Border Grid.Column="3"
+                            Background="#17243A"
+                            CornerRadius="8"
+                            Padding="12"
+                            Margin="6,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="TOTAL RESISTANCE"
+                                       FontSize="9"
+                                       Foreground="#C0CBDA"
+                                       TextWrapping="Wrap"/>
+
+                            <TextBlock
+                                Text="{Binding SelectedAssemblyTotalResistance,
+                                StringFormat={}{0:F4}}"
+                                FontSize="19"
+                                FontWeight="Bold"
+                                Foreground="White"
+                                Margin="0,7,0,2"/>
+
+                            <TextBlock Text="m²·K/W"
+                                       FontSize="9"
+                                       Foreground="#C0CBDA"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Grid>
+
+
+                <!-- U-VALUE -->
+
+                <Border Background="#F3F5F9"
+                        CornerRadius="8"
+                        Padding="12"
+                        Margin="0,0,0,20">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <TextBlock Text="ASSEMBLY U-VALUE"
+                                       FontSize="10"
+                                       Foreground="{StaticResource TextMuted}"/>
+
+                            <TextBlock
+                                Text="{Binding SelectedAssemblyUValue,
+                                StringFormat={}{0:F4} W/(m²·K)}"
+                                FontSize="21"
+                                FontWeight="Bold"
+                                Foreground="{StaticResource Green}"
+                                Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+                        <TextBlock Grid.Column="1"
+                                   Text="Lower U-value = Better insulation"
+                                   FontSize="10"
+                                   Foreground="{StaticResource TextMuted}"
+                                   VerticalAlignment="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+
+                <!-- MATERIAL TABLE HEADER -->
+
+                <Grid Margin="0,0,0,12">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.8*"/>
+                        <ColumnDefinition Width="0.9*"/>
+                        <ColumnDefinition Width="0.7*"/>
+                        <ColumnDefinition Width="0.8*"/>
+                        <ColumnDefinition Width="1.4*"/>
+                        <ColumnDefinition Width="1.4*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0"
+                               Text="MATERIAL"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource TextMuted}"/>
+
+                    <TextBlock Grid.Column="1"
+                               Text="THICKNESS"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource TextMuted}"/>
+
+                    <TextBlock Grid.Column="2"
+                               Text="λ"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource TextMuted}"/>
+
+                    <TextBlock Grid.Column="3"
+                               Text="R-VALUE"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource TextMuted}"/>
+
+                    <TextBlock Grid.Column="4"
+                               Text="CONTRIBUTION"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource TextMuted}"/>
+
+                    <TextBlock Grid.Column="5"
+                               Text="SOURCE"
+                               FontSize="10"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource TextMuted}"/>
+
+                </Grid>
+
+
+                <Border Height="1"
+                        Background="#E9EDF3"
+                        Margin="0,0,0,12"/>
+
+
+                <!-- MATERIAL LAYERS -->
+
+                <ItemsControl ItemsSource="{Binding BestAssemblyLayers}">
+
+                    <ItemsControl.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <StackPanel Margin="0,0,0,15">
+
+                                <Grid Margin="0,5,0,8">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1.8*"/>
+                                        <ColumnDefinition Width="0.9*"/>
+                                        <ColumnDefinition Width="0.7*"/>
+                                        <ColumnDefinition Width="0.8*"/>
+                                        <ColumnDefinition Width="1.4*"/>
+                                        <ColumnDefinition Width="1.4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Grid.Column="0"
+                                               Text="{Binding LayerName}"
+                                               FontSize="11"
+                                               Foreground="{StaticResource TextDark}"
+                                               TextWrapping="Wrap"/>
+
+                                    <TextBlock Grid.Column="1"
+                                               Text="{Binding ThicknessMm, StringFormat={}{0:F1} mm}"
+                                               FontSize="10"/>
+
+                                    <TextBlock Grid.Column="2"
+                                               Text="{Binding ThermalConductivityWmK, StringFormat={}{0:F3}}"
+                                               FontSize="10"/>
+
+                                    <TextBlock Grid.Column="3"
+                                               Text="{Binding ThermalResistance, StringFormat={}{0:F4}}"
+                                               FontSize="10"/>
+
+                                    <TextBlock Grid.Column="4"
+                                               Text="{Binding ResistanceContributionPercentage, StringFormat={}{0:F2}%}"
+                                               FontSize="10"
+                                               FontWeight="SemiBold"
+                                               Foreground="{StaticResource Green}"/>
+
+                                    <Border Grid.Column="5"
+                                            Background="#F3F5F9"
+                                            CornerRadius="5"
+                                            Padding="6,4"
+                                            HorizontalAlignment="Left">
+
+                                        <TextBlock
+                                            Text="{Binding ConductivitySourceName}"
+                                            FontSize="9"
+                                            FontWeight="SemiBold"
+                                            Foreground="{Binding ConductivitySourceColor}"
+                                            TextWrapping="Wrap"/>
+
+                                    </Border>
+
+                                </Grid>
+
+
+                                <!-- CONTRIBUTION BAR -->
+
+                                <ProgressBar
+                                    Value="{Binding ResistanceContributionPercentage}"
+                                    Maximum="100"
+                                    Height="9"
+                                    Background="#EDF0F5"
+                                    Foreground="{StaticResource Green}"
+                                    BorderThickness="0"/>
+
+                            </StackPanel>
+
+                        </DataTemplate>
+
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+
+
+                <!-- SOURCE LEGEND -->
+
+                <Border Background="#F3F5F9"
+                        CornerRadius="8"
+                        Padding="12"
+                        Margin="0,10,0,0">
+
+                    <StackPanel>
+
+                        <TextBlock Text="CONDUCTIVITY DATA SOURCES"
+                                   FontSize="10"
+                                   FontWeight="Bold"
+                                   Foreground="{StaticResource TextDark}"
+                                   Margin="0,0,0,10"/>
+
+                        <WrapPanel>
+
+                            <TextBlock Text="● Manufacturer verified"
+                                       Foreground="#159B72"
+                                       FontSize="10"
+                                       FontWeight="SemiBold"
+                                       Margin="0,0,18,5"/>
+
+                            <TextBlock Text="● Revit thermal asset"
+                                       Foreground="#4776E6"
+                                       FontSize="10"
+                                       FontWeight="SemiBold"
+                                       Margin="0,0,18,5"/>
+
+                            <TextBlock Text="● Unknown / unverified"
+                                       Foreground="#D99B35"
+                                       FontSize="10"
+                                       FontWeight="SemiBold"
+                                       Margin="0,0,0,5"/>
+
+                        </WrapPanel>
+
+                        <TextBlock
+                            Text="Material contribution is calculated relative to total assembly resistance, including internal and external surface resistance. The material percentages therefore do not add up to 100%."
+                            TextWrapping="Wrap"
+                            FontSize="10"
+                            Foreground="{StaticResource TextMuted}"
+                            Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Border>
+
+</UserControl>

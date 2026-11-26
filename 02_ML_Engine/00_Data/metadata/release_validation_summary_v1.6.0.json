@@ -1,0 +1,58 @@
+{
+  "release": "SpecSynth v1.6.0 Candidate Data Package",
+  "status": "CANDIDATE \u2014 NOT A PRODUCTION RELEASE",
+  "created_utc": "2026-11-22T23:57:37.904895+00:00",
+  "master_database": {
+    "file": "01_Master_Database/SpecSynth_Master_v1.6.0_CANDIDATE.sqlite",
+    "production_table_counts": {
+      "products": 182,
+      "product_variants": 1941,
+      "sources": 150,
+      "product_source_links": 208,
+      "variant_source_links": 2002,
+      "manufacturer_assemblies": 77,
+      "thermal_baseline": 4753,
+      "ml_variant_records": 1941
+    },
+    "staging_candidate_rows": 75,
+    "production_tables_changed": false
+  },
+  "research_candidates": {
+    "records": 75,
+    "identity_decisions": "75 pending human confirmation",
+    "technical_approvals": "0",
+    "ml_approved": "0",
+    "production_ingested": "0"
+  },
+  "thermal_conductivity_baseline": {
+    "source": "SpecSynth_ML_variants_v1.5.0.csv",
+    "labelled_rows": 1781,
+    "all_rows": 1941,
+    "unique_split_groups": 103,
+    "split_counts": {
+      "train": 1493,
+      "validation": 174,
+      "test": 114
+    },
+    "group_overlap_across_splits": 0,
+    "leakage_columns_excluded_from_modeling_view": [
+      "thermal_conductivity_W_mK",
+      "thermal_resistance_m2K_W",
+      "target_thermal_conductivity_W_mK"
+    ],
+    "status": "INHERITED BASELINE ONLY \u2014 NOT EXPANDED WITH UNAPPROVED RESEARCH"
+  },
+  "expanded_review_union": {
+    "rows": 2016,
+    "existing_master_ml_rows": 1941,
+    "research_candidate_rows": 75,
+    "training_use": "PROHIBITED; tracking/review only"
+  },
+  "assembly_u_value_data": "Kept separate; not merged into material thermal conductivity target dataset.",
+  "limitations": [
+    "No candidate has approval in the supplied review registers.",
+    "No new research candidate can be promoted to production or training without human identity and evidence approval.",
+    "Therefore a genuinely expanded approved ML training dataset cannot truthfully be released from the supplied sources.",
+    "The supplied master is named SpecSynth_Master_v1.0 but its release notes identify the canonical catalogue lineage as v1.5.0."
+  ]
+}
